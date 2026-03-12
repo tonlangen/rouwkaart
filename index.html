@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn 3D Kaart</title>
     <style>
-        body { 
-            margin: 0; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            background-color: #f0f2f5; 
-            font-family: sans-serif;
-        }
-        .kaart-container { 
-            width: 95%; 
-            max-width: 900px; 
-            height: 600px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            background: white;
-            border-radius: 8px;
+        body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #ffffff; }
+        
+        /* De 'uitsnede' van je kaart */
+        .crop-container {
+            width: 450px;  /* Pas dit aan naar de breedte van je foto */
+            height: 600px; /* Pas dit aan naar de hoogte van je foto */
             overflow: hidden;
+            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* De Heyzine player die we groter maken en verschuiven */
+        iframe {
+            width: 1500px; /* Veel breder maken om de witte zijbalken weg te duwen */
+            height: 800px; /* Hoger maken om het logo onderaan weg te duwen */
+            position: absolute;
+            top: -100px;   /* Verschuiven naar boven */
+            left: -525px;  /* Verschuiven naar links (midden van de kaart zoeken) */
+            border: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="kaart-container">
-        <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/2ace11b0d1.html" style="border: none; width: 100%; height: 100%;"></iframe>
-    </div>
+<div class="crop-container">
+    <iframe src="https://heyzine.com" scrolling="no"></iframe>
+</div>
 
 </body>
 </html>
