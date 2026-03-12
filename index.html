@@ -1,59 +1,69 @@
 <!DOCTYPE html>
+
 <html lang="nl">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mijn 3D Kaart - Gecropt</title>
+
+    <title>Mijn 3D Kaart</title>
+
     <style>
+
         body { 
+
             margin: 0; 
+
             display: flex; 
+
             justify-content: center; 
+
             align-items: center; 
+
             min-height: 100vh; 
+
             background-color: #f0f2f5; 
+
             font-family: sans-serif;
+
         }
 
-        /* De container bepaalt wat de bezoeker ziet */
         .kaart-container { 
+
             width: 95%; 
-            max-width: 800px; /* Iets smaller gezet voor betere focus */
-            height: 500px; 
+
+            max-width: 900px; 
+
+            height: 600px; 
+
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
             background: white;
+
             border-radius: 8px;
-            overflow: hidden; /* Dit zorgt voor het crop-effect */
-            position: relative;
+
+            overflow: hidden;
+
         }
 
-        /* De iframe maken we groter en verschuiven we */
-        .fp-iframe {
-            position: absolute;
-            border: none;
-            
-            /* Maak de iframe groter dan de container (bijv. 110%) */
-            width: 110%; 
-            height: 120%;
-            
-            /* Verschuif de iframe zodat het logo (links- of rechtsonder) buiten beeld valt */
-            /* Je moet mogelijk een beetje spelen met deze waarden: */
-            top: -10%; 
-            left: -5%;
-        }
     </style>
+
 </head>
+
 <body>
 
+
+
     <div class="kaart-container">
-        <iframe 
-            allowfullscreen="allowfullscreen" 
-            allow="clipboard-write" 
-            scrolling="no" 
-            class="fp-iframe" 
-            src="https://heyzine.com/flip-book/2ace11b0d1.html">
-        </iframe>
+
+        <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/2ace11b0d1.html" style="border: none; width: 100%; height: 100%;"></iframe>
+
     </div>
 
+
+
 </body>
+
 </html>
